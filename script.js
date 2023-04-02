@@ -116,4 +116,18 @@ equals.addEventListener('click',()=>{
     }
 })
 
-//
+//Handle the sign
+const sign = document.querySelector('.sign');
+sign.addEventListener('click',()=>{
+    screenValue = String(-Number(screenValue));
+    display();
+})
+
+//Handle the point
+const point = document.querySelector('.point');
+point.addEventListener('click',()=>{
+    if(!screenValue.includes('.')){
+        screenValue += '.';
+        display();
+    }
+})
