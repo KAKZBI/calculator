@@ -11,36 +11,42 @@ html{
 body {
     width: 100%;
     height: 100%;
+    background-color: white;
 }
 #calculator{
     margin: auto;
-    border: 1px solid #ccc;
+    border: 5px solid #313131;
     display: grid;
     grid-template-columns: repeat(4, mimax(1em,1fr));
     grid-template-rows: repeat(6, mimax(3em,1fr));
     max-width: 40vw;
-    margin-top: 20%;
-    min-height: 60%;
+    margin-top: 5%;
+    min-height: 80vh;
 }
 .screen{
     grid-column: 1/5;
     display:flex;
     justify-content: flex-end;
     align-items: center;
-    height: 3em;
+    background-color: lightblue;
+    font-size: xx-large;
+    border: 1.5px solid #313131;
+    /* height: 3em; */
 }
 .screen:active{
     background-color: bisque;
 }
 button{
     background-color: white;
-    border: #ccc 1px solid;
+    border: #141111 2px solid;
     min-height: 2em;
+    border-radius: 4%;
+    /* font-size:xx-large; */
 }
-button[value="add"]{
+/* button[value="add"]{
     grid-column: 4/5;
     grid-row: 3/5;
-}
+} */
 button:hover{
     background-color: gray;
 }
@@ -54,7 +60,24 @@ button[value="="]:hover{
 }
 .operator, .sign{
     background-color: #8b848467;
+    font-size:xx-large;
 }
 .operator:active{
     background-color: yellow;
+}
+button[value="backspace"]{
+    background-color: #e9cfcf67;
+    font-size: medium;
+}
+button[value="backspace"]:hover{
+    background-color: #ee606067;
+}
+button[value="clear"]{
+    background-color: #eba8a867;
+}
+button[value="clear"]:hover{
+    background-color: #f10928e5;
+}
+button[class="digit"],button[class="point"],button[class="operator"]{
+    font-size:xx-large;
 }
