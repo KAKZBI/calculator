@@ -131,3 +131,16 @@ point.addEventListener('click',()=>{
         display();
     }
 })
+
+//Handle the Clear button
+const clear = document.querySelector('.clear');
+clear.addEventListener('click',()=>{
+     screenValue = '0';
+    firstOperand = null;
+    secondOperand = null;
+    firstOperator = null;
+    secondOperator = null;
+    result = null;
+display();
+})
+
