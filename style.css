@@ -15,7 +15,7 @@ body {
 }
 #calculator{
     margin: auto;
-    border: 5px solid #313131;
+    border: 10px solid #313131;
     display: grid;
     grid-template-columns: repeat(4, mimax(1em,1fr));
     grid-template-rows: repeat(6, mimax(3em,1fr));

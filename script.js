@@ -29,7 +29,7 @@ let result = null;
 //Display function
 function display(){
     let screen = document.querySelector('.screen');
-    screen.innerText = screenValue;
+    screen.innerText = rounding(String(screenValue));
 }
 display();
 
@@ -162,3 +162,15 @@ window.addEventListener('keydown', function(e){
     key.click();
 });
 
+//Handle large numbers
+function rounding(str){
+if(str.length > 9){
+    let str2 = Number(str).toExponential();//Convert to exponential
+    let str3 = String(str2);// Convert back to string
+    let str4 = str3.slice(0, 4);//Extract the first four characters
+    let str5 = str3.slice(-3, str3.length);//Extract the last four digits characters
+    let finalString = str4 + str5; //Concatenate the last two extracted strings
+    return finalString;
+}
+else return str;
+}
