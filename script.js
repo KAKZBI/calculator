@@ -135,12 +135,24 @@ point.addEventListener('click',()=>{
 //Handle the Clear button
 const clear = document.querySelector('.clear');
 clear.addEventListener('click',()=>{
-     screenValue = '0';
+    screenValue = '0';
     firstOperand = null;
     secondOperand = null;
     firstOperator = null;
     secondOperator = null;
     result = null;
 display();
+})
+
+//Handle the backspace button
+const backspace = document.querySelector('.backspace');
+backspace.addEventListener('click', () =>{
+     if(Number(screenValue) != 0){
+        screenValue = screenValue.slice(0,-1);
+        if(screenValue.length==0 || screenValue=="-"){
+            screenValue = '0';
+        }
+        display();
+    }
 })
 
