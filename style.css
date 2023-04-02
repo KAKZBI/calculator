@@ -5,6 +5,10 @@
   padding: 0;
   margin: 0;
 }
+@font-face {
+    font-family: holder_medium;
+    src: url(./fonts/holder/HolderBold_PERSONAL_USE_ONLY.otf);
+  }
 html{
     box-sizing: border-box;
 }
@@ -12,6 +16,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: white;
+    font-family:robotronica, lato, sans-serif;
 }
 #calculator{
     margin: auto;
@@ -80,4 +85,17 @@ button[value="clear"]:hover{
 }
 button[class="digit"],button[class="point"],button[class="operator"]{
     font-size:xx-large;
+}
+footer{
+     background-color: #1F2937; 
+     color:#e5E7EB; 
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 0;
+    bottom: 0;
+    margin-top: 2rem;
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
